@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Servicio de contrato de internet</title>
+
+</head>
+<body>
+    <main>
+  <form id="formularioContratacion">
+
+
+      <h3>Datos Personales</h3>
+      <br>
+      <div class="campo">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" placeholder="Nombre" required>
+      </div>
+      <div class="campo">
+        <label for="dui">DUI:</label>
+        <input type="text" id="dui" placeholder="xxxxxxx-x" required>
+      </div>
+      <div class="campo">
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" placeholder="XXXX-XXXX" required>
+      </div>
+      <div class="campo">
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" placeholder="Tu.correo.123@dominio.com" required>
+      </div>
+    </section>
+
+    <br>
+    <section>
+      <h2>Localización</h2>
+      <br>
+      <div class="campo">
+        <label for="departamento">Departamento:</label>
+        <select id="departamento" required>
+          <option value="">Seleccionar</option>
+          <option>San Salvador</option>
+          <option>San Miguel</option>
+          <option>Santa Ana</option>
+          <option>La Libertad</option>
+          <option>Usulután</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="municipio">Municipio:</label>
+        <input type="text" id="municipio" placeholder="ej.: San Miguel" required>
+      </div>
+      <div class="campo">
+        <label for="direccion">Dirección exacta:</label>
+        <input type="text" id="direccion" placeholder="Col. El Paraíso, calle principal #5" required>
+      </div>
+    </section>
+<br>
+    
+    <section>
+      <h2>Paquetes de Servicio</h2>
+      <p>Seleccione un paquete:</p>
+      <br>
+    <style>
+        .paquete-card:hover { border-color: #0056b3; background: #e8f0fe; }
+        .paquete-card.seleccionado { border-color: #0056b3; background: #cfe2ff; }
+
+        .paquete-card h3 { color: #0056b3; }
+        .paquete-card p { font-size: 13px; margin-top: 5px; }
+        .paquete-card .precio { font-size: 18px; font-weight: bold; color: #28a745; margin-top: 8px; }
+    </style>
+      <div class="paquetes" id="contenedorPaquetes"></div>
+      <input type="hidden" id="paqueteSeleccionado">
+    </section>
+
+    <button style="background-color: #0056b3; color: white; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer;" type="button" onclick="procesarContratacion()">Contratar el servicio</button>
+  </form>
+
+  <br><br>
+  <div id="resumen">
+    <h2>Resumen de Contratación</h2>
+    <div id="contenidoResumen"></div>
+  </div>
+</main>
+
+    <script src="script.js"></script>
+
+<div class="card-footer">
+    <p style="text-align:center;">
+       © AirNet – San Miguel | Servicios de Internet</p>
+</div>
+</body>
+</html>
