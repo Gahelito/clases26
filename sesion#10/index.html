@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-section">
+            <h2>Agregar libro</h2>
+            <input type="text" id="titulo" placeholder="Título del libro">
+            <input type="text" id="autor" placeholder="Autor del libro">
+
+            <label for="genero">Genero </label>
+            <select id="genero">
+                <option value="ficcion">Ficción</option>
+                <option value="Terror">Terror</option>
+                <option value="no-ficcion">Ciencia Ficción</option>
+                <option value="fantasia">Fantasía</option>
+                </select>
+
+            <button onclick="addLibro()">Agregar libro</button>
+        </div>
+
+        <div class="actions">
+            <button onclick="mostrarTodos()">Mostrar todos los libros</button>
+            <button onclick="eliminarLibros()">Eliminar el ultimo libro</button>
+            <button onclick="filtrarPorGenero()">Filtrar por genero</button>
+            <button onclick="resumen()">Resumen por genero</button>
+        </div>
+        <div id="listaLibros"></div>
+    </div>
+
+    <script src="js.js"></script>
+</body>
+</html>

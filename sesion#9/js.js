@@ -1,6 +1,5 @@
 let productos = [];
 
-// Método para agregar producto
 function agregarProducto(nombre, precio, cantidad) {
     let producto = {
         id: Date.now(),
@@ -12,7 +11,6 @@ function agregarProducto(nombre, precio, cantidad) {
     mostrarProductos();
 }
 
-// Método para mostrar productos
 function mostrarProductos() {
     let lista = document.getElementById("listaProductos");
     lista.innerHTML = "";
@@ -30,13 +28,12 @@ function mostrarProductos() {
     });
 }
 
-// Método para eliminar
 function eliminarProducto(id) {
     productos = productos.filter(p => p.id !== id);
     mostrarProductos();
 }
 
-// Evento del formulario
+
 document.getElementById("formProducto").addEventListener("submit", function(e) {
     e.preventDefault();
 
